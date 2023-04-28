@@ -1,0 +1,210 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;500&display=swap');
+
+* {
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 705px;
+    background: rgb(2, 0, 36);
+    background: linear-gradient(180deg,
+            rgba(2, 0, 36, 1) 0%,
+            rgba(9, 9, 121, 1) 35%,
+            rgba(0, 212, 255, 1) 100%);
+}
+
+.container {
+    padding: 15px 15px;
+    padding-left: 2%;
+    padding-right: 10%;
+    box-sizing: border-box;
+
+}
+
+.navbar {
+    height: 12%;
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    width: 200px;
+    cursor: pointer;
+}
+
+.search-bar {
+    width: 100%;
+    max-width: 400px;
+    height: 40px;
+    margin-left: 130px;
+    background: rgb(255, 255, 255, 0.2);
+    display: flex;
+    align-items: center;
+    border-radius: 60px;
+    padding: 1px 5px;
+    backdrop-filter: blur(4px) saturate(180%);
+}
+
+.search-bar input {
+    background: transparent;
+    flex: 1;
+    border: 0;
+    outline: none;
+    padding: 1px 1px;
+    font-size: 15px;
+    color: #cac7ff;
+
+}
+
+::placeholder {
+    color: #cac7ff;
+}
+
+.search-bar button {
+    font-size: 15px;
+    color: #fff;
+    border: 0;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    background: #58629b;
+    cursor: pointer;
+}
+
+nav {
+    flex: 1;
+    text-align: right;
+}
+
+.menu li {
+    list-style: none;
+    display: inline-block;
+    margin-left: 45px;
+
+}
+
+.menu li a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 16px;
+    text-transform: uppercase;
+    transition: .3s ease;
+    white-space: nowrap;
+}
+
+nav ul li a:hover {
+    color: black;
+
+}
+
+/* .toggle a {
+    font-size: 25px;
+} */
+/* nav {
+    padding: 5px 20px;
+}
+
+ul {
+    list-style-type: none;
+}
+
+a {
+    color: #fff;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.logo a:hover {
+    text-decoration: none;
+}
+
+.menu li {
+    font-size: 16px;
+    padding: 15px 5px;
+    margin: 40px;
+    color: #fff;
+    font-size: 16px;
+    text-transform: uppercase;
+    transition: .3s ease;
+    white-space: nowrap;
+    text-decoration: none;
+}
+
+.toggle a {
+    font-size: 25px;
+} */
+
+/* Moblie Menu */
+/* 
+.menu {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.toggle {
+    order: 1;
+}
+
+.item {
+    width: 100%;
+    text-align: center;
+    order: 3;
+    display: none;
+}
+
+.item.active {
+    display: block;
+}
+
+/* Tablet Menu */
+
+/* @media all and (min-width: 600px) {
+    .menu {
+        justify-content: center;
+    }
+
+    .logo {
+        flex: 1;
+    }
+
+    .toggle {
+        flex: 1;
+        text-align: right;
+        order: 2;
+    }
+
+    /* .toggle {
+        order: 2;
+    } */
+/* } */
+
+/* Desktop menu */
+@media all and (min-width: 900px) {
+    .item {
+        display: block;
+        width: auto;
+    }
+
+    .toggle {
+        display: none;
+    }
+
+    .logo {
+        order: 0;
+    }
+
+    .item {
+        order: 1;
+    }
+
+    .menu li {
+        padding: 15px 10px;
+    }
+} 
