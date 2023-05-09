@@ -1,55 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Moniter</title>
-    <link rel="stylesheet" href="stlye.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-    />
-  </head>
 
-  <body>
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Moniter</title>
+  <link rel="stylesheet" href="stlye.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <script src="script.js" defer></script>
+</head>
 
-     <!-- ***** Header Area Start ***** -->
-    <header>
-      <img class="logo" src="assets/images/icon_company.png" alt="" />
-      <form action="" method="get" class="search-bar">
-        <input type="text" placeholder="Search..." name="q" />
-        <button type="submit">
-          <i class="fa fa-search"></i>
-        </button>
-      </form>
-      <ul class="menu">
-        <li><a href="#" class="active">Home</a></li>
-        <li><a href="#">Organization</a></li>
-        <li><a href="#">Static</a></li>
-      </ul>
-      </div>
-      <div class="toggle_btn">
-        <i class="fa-solid fa-bars"></i>
-      </div>
-    </header>
-    <script>
-      const toggleBtn = document.querySelector(".toggle_btn")
-      const toggleIcon = document.querySelector(".toggle_btn i")
-      const navMenu = document.querySelector(".menu");
+<body>
 
-      toggleBtn.addEventListener('click', ()=>{
-        navMenu.classList.toggle('moblie-menu')
-        toggleIcon.classList = isOpen
-          ? "fa-solid fa-xmark"
-          : "fa-solid fa-bars";
-      })
-    </script>
-    <!-- ***** Header Area End ***** -->
-    
+  <!-- ***** Header Area Start ***** -->
+  <header class="header">
+    <i class="fa-solid fa-bars OpenBtn"></i>
+    <img class="logo" src="assets/images/icon_company.png" alt="" />
+    <form action="" method="get" class="search-bar">
+      <input type="text" placeholder="Search..." name="q" />
+      <button type="submit">
+        <i class="fa fa-search"></i>
+      </button>
+    </form>
+
+    <ul class="menu">
+      <i class="fa fa-times CloseBtn"></i>
+      <li><a href="#" class="active">Home</a></li>
+      <li><a href="#">Organization</a></li>
+      <li><a href="#">Static</a></li>
+    </ul>
+
+    <i class="fa fa-search search-icon" id="searchIcon"></i>
+    <div class="search-box">
+      <input type="text" placeholder="Search..." name="q">
+      <button type="submit">
+        <i class="fa fa-search"></i>
+      </button>
+    </div>
+  </header>
+  <!-- ***** Header Area End ***** -->
+
   <main>
     <section class="parent">
-      <section class="child">
+      <section class="child1">
         <header class="head">
           <h2>มหาวิทยาลัยเกษตรศาสตร์</h2>
           <ul class="work-status">
@@ -86,7 +80,7 @@
               </tr>
             </table>
           </div>
-          <div class="flex-item item-2">
+          <!-- <div class="flex-item item-2">
             <h4>KUSE 02</h4>
             <table>
               <tr>
@@ -111,7 +105,7 @@
                 <td>15</td>
               </tr>
             </table>
-          </div>
+          </div> -->
           <!-- <div class="flex-item item-3">
             <h4>KUSE3</h4>
             <table>
@@ -140,9 +134,9 @@
           </div> -->
       </section>
 
-      <section class="child">
+      <section class="child2">
         <header class="head">
-          <h2>เทคนิคสกลนคร</h2>
+          <h2 class="head_sktc">เทคนิคสกลนคร</h2>
           <ul class="work-status">
             <li class="content1">on 6</li>
             <li class="content2">off 0</li>
@@ -153,7 +147,7 @@
         <div class="container">
           <div class="flex-item item-1">
             <h4>SKTC 01</h4>
-            <table>
+            <table class="tb_sktc">
               <tr>
                 <td>1</td>
                 <td>2</td>
@@ -164,7 +158,7 @@
               </tr>
             </table>
           </div>
-          <div class="flex-item item-2">
+          <!-- <div class="flex-item item-2">
             <h4>SKTC 02</h4>
             <table>
               <tr>
@@ -176,55 +170,57 @@
                 <td>4</td>
               </tr>
             </table>
-          </div>
+          </div> -->
       </section>
 
-      <section class="child1">
+      <section class="child3">
         <header class="head">
           <h3>Status</h3>
         </header>
         <div class="container-status">
           <div class="icons">
-            <div class="icon-going_up">
-              <i class="fa-solid fa-caret-up"></i>
-              <h3>going up</h3>
-            </div>
-
-            <div class="icon-going_down">
-              <i class="fa-solid fa-caret-down"></i>
-              <h3>going down</h3>
-            </div>
-
-            <div class="icon-up">
-              <i class="fa-solid fa-up-long"></i>
-              <h3>up</h3>
-            </div>
-
-            <div class="icon-down">
-              <i class="fa-solid fa-down-long"></i>
-              <h3>down</h3>
+            <div class="status_icons">
+              <span><i class="fa-solid fa-caret-up"></i></span>
+              <span>
+                <h3>going up</h3>
+              </span>
+              <span><i class="fa-solid fa-caret-down"></i></span>
+              <span>
+                <h3>going down</h3>
+              </span>
+              <span><i class="fa-solid fa-up-long"></i></span>
+              <span>
+                <h3>up</h3>
+              </span>
+              <span><i class="fa-solid fa-down-long"></i></span>
+              <span>
+                <h3>down</h3>
+              </span>
             </div>
           </div>
           <div class="lift-icons">
-            <div class="icon-closed">
-              <img src="assets/images/closed.png" alt="">
-              <h3>closed</h3>
-            </div>
-            <div class="icon-opened">
-              <img src="assets/images/opened.png" alt="">
-              <h3>opened</h3>
-            </div>
-            <div class="icon-closing">
-              <img src="assets/images/closing.png" alt="">
-              <h3>closing</h3>
-            </div>
-            <div class="icon-opening">
-              <img src="assets/images/opening.png" alt="">
-              <h3>opening</h3>
+            <div class="status_lift-icons">
+              <span><img src="assets/images/closed.png" alt=""></span>
+              <span>
+                <h3>closed</h3>
+              </span>
+              <span><img src="assets/images/opened.png" alt=""></span>
+              <span>
+                <h3>opened</h3>
+              </span>
+              <span><img src="assets/images/closing.png" alt=""></span>
+              <span>
+                <h3>closing</h3>
+              </span>
+              <span><img src="assets/images/opening.png" alt=""></span>
+              <span>
+                <h3>opening</h3>
+              </span>
             </div>
           </div>
         </div>
       </section>
   </main>
-  </body>
+</body>
+
 </html>
